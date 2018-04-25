@@ -7,6 +7,7 @@
 #include "samples/Dummy.h"
 #include "samples/Base.h"
 #include "samples/Thread1.h"
+#include "samples/Darbud.h"
 
 std::shared_ptr<Config> cfg;
 
@@ -16,6 +17,7 @@ int main(int argc, char** argv) {
 	
 	Tutorials::get().add(new Dummy());
 	Tutorials::get().add(new Base(thread1::main, "thread1"));
+	Tutorials::get().add(new Base(Darbud::main, "darbud"));
 
 	Tutorials::get().run(cfg->getTutorial());
 	std::cout << "BYE!" << std::endl;

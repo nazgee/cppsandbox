@@ -8,6 +8,7 @@ SRCS = tutor.cpp Config.cpp Tutorials.cpp
 SRCS += samples/Dummy.cpp
 SRCS += samples/Base.cpp
 SRCS += samples/Thread1.cpp
+SRCS += samples/Darbud.cpp
 
 OBJS=$(subst .cpp,.o,$(SRCS))
 
