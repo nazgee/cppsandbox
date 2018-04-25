@@ -5,6 +5,7 @@
  *      Author: nazgee
  */
 
+#include <functional>
 #include <iostream>
 #include <thread>
 #include <vector>

@@ -8,6 +8,7 @@
 #ifndef TUTORIALS_H_
 #define TUTORIALS_H_
 
+#include <functional>
 #include <iostream>
 #include <map>
 #include <memory>
