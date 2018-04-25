@@ -12,4 +12,8 @@ namespace Darbud {
 int main(int argc, char** argv);
 }
 
+namespace Iwanodar {
+int main(int argc, char** argv);
+}
+
 #endif /* SAMPLES_Darbud_H_ */

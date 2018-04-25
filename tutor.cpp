@@ -12,15 +12,16 @@
 std::shared_ptr<Config> cfg;
 
 int main(int argc, char** argv) {
-	cfg = std::make_shared<Config>(argc, argv);
-	std::cout << cfg->toString() << std::endl;
-	
-	Tutorials::get().add(new Dummy());
-	Tutorials::get().add(new Base(thread1::main, "thread1"));
-	Tutorials::get().add(new Base(Darbud::main, "darbud"));
+    cfg = std::make_shared<Config>(argc, argv);
+    std::cout << cfg->toString() << std::endl;
 
-	Tutorials::get().run(cfg->getTutorial());
-	std::cout << "BYE!" << std::endl;
+    Tutorials::get().add(new Dummy());
+    Tutorials::get().add(new Base(thread1::main, "thread1"));
+    Tutorials::get().add(new Base(Darbud::main, "darbud"));
+    Tutorials::get().add(new Base(Iwanodar::main, "iwanodar"));
 
-	return EXIT_SUCCESS;
+    Tutorials::get().run(cfg->getTutorial());
+    std::cout << "BYE!" << std::endl;
+
+    return EXIT_SUCCESS;
 }

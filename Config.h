@@ -14,20 +14,19 @@ class Config {
     int mSilent;
     std::string mTutorial;
 
-
 public:
-	Config(int argc, char **argv);
-	~Config();
+    Config(int argc, char **argv);
+    ~Config();
 
-	std::string getTutorial() {
-	    return mTutorial;
-	}
+    std::string getTutorial() {
+        return mTutorial;
+    }
 
-	bool isVerbose() {
-	    return mSilent;
-	}
+    bool isVerbose() {
+        return mSilent;
+    }
 
-	std::string toString();
+    std::string toString();
 };
 
 // XXX this is silly way to share config - done on purpose
