@@ -5,6 +5,8 @@
 #include "Tutorials.h"
 
 #include "samples/Dummy.h"
+#include "samples/Base.h"
+#include "samples/Thread1.h"
 
 std::shared_ptr<Config> cfg;
 
@@ -13,6 +15,7 @@ int main(int argc, char** argv) {
 	std::cout << cfg->toString() << std::endl;
 	
 	Tutorials::get().add(new Dummy());
+	Tutorials::get().add(new Base(thread1::main, "thread1"));
 
 	Tutorials::get().run(cfg->getTutorial());
 	std::cout << "BYE!" << std::endl;
