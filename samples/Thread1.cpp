@@ -67,6 +67,45 @@ int main(int argc, char** argv) {
     // XXX wait for all threads to complete
     std::for_each(v.begin(), v.end(), std::mem_fn(&std::thread::join));
 
+    {
+        int local1 = 1;
+        // = 1
+        std::cout << "local1=" << local1 << std::endl;
+
+        auto lambda_ref = [&local1]() {
+            local1++;
+            std::cout << "ref local1=" << local1 << std::endl;
+        };
+
+        // this WILL change the value of local1
+        // = 2
+        lambda_ref();
+        // = 3
+        lambda_ref();
+        // = 3
+        std::cout << "REF local1=" << local1 << std::endl;
+
+        // when lambdas capturing locals 'by value' are created, they keep their own copy
+        auto lambda_val = [local1]() mutable {
+            local1++;
+            std::cout << "loc local1=" << local1 << std::endl;
+        };
+
+        // = 4
+        lambda_val();
+        // = 5
+        lambda_val();
+        // = 3
+        std::cout << "LOC local1=" << local1 << std::endl;
+
+        // = 4
+        lambda_ref();
+        // = 5
+        lambda_ref();
+        // = 5
+        std::cout << "REF local1=" << local1 << std::endl;
+    }
+
     return EXIT_SUCCESS;
 }
 
