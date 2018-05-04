@@ -9,6 +9,7 @@ SRCS += samples/Dummy.cpp
 SRCS += samples/Base.cpp
 SRCS += samples/Thread1.cpp
 SRCS += samples/Darbud.cpp
+SRCS += samples/Caesar.cpp
 
 OBJS=$(subst .cpp,.o,$(SRCS))
 
