@@ -1,6 +1,6 @@
 CXX=g++
 RM=rm -f
-CPPFLAGS=-O2 -g -Wall -fmessage-length=0 -std=c++14
+CPPFLAGS=-O4 -g -Wall -fmessage-length=0 -std=c++14
 LDFLAGS=
 LDLIBS= -lpthread
 
@@ -10,6 +10,7 @@ SRCS += samples/Base.cpp
 SRCS += samples/Thread1.cpp
 SRCS += samples/Darbud.cpp
 SRCS += samples/Caesar.cpp
+SRCS += samples/Prime.cpp
 
 OBJS=$(subst .cpp,.o,$(SRCS))
 

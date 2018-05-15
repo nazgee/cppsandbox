@@ -9,6 +9,7 @@
 #include "samples/Thread1.h"
 #include "samples/Darbud.h"
 #include "samples/Caesar.h"
+#include "samples/Prime.h"
 
 std::shared_ptr<Config> cfg;
 
@@ -21,6 +22,7 @@ int main(int argc, char** argv) {
     Tutorials::get().add(new Base(Darbud::main, "darbud"));
     Tutorials::get().add(new Base(Iwanodar::main, "iwanodar"));
     Tutorials::get().add(new Base(Caesar::main, "caesar"));
+    Tutorials::get().add(new Base(Prime::main, "prime"));
 
     Tutorials::get().run(cfg->getTutorial());
     std::cout << "BYE!" << std::endl;

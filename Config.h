@@ -11,7 +11,7 @@
 #include <memory>
 
 class Config {
-    int mSilent;
+    int mSilent = 0;
     std::string mTutorial;
 
 public:
