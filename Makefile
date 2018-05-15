@@ -11,6 +11,7 @@ SRCS += samples/Thread1.cpp
 SRCS += samples/Darbud.cpp
 SRCS += samples/Caesar.cpp
 SRCS += samples/Prime.cpp
+SRCS += samples/Perfect.cpp
 
 OBJS=$(subst .cpp,.o,$(SRCS))
 
